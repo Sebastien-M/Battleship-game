@@ -8,7 +8,7 @@ and open the template in the editor.
     <head>
         <meta charset="UTF-8">
         <link rel="stylesheet" href="css/grid.css"/>
-        
+
         <title></title>
     </head>
     <body>
@@ -23,7 +23,7 @@ and open the template in the editor.
                 <div class="map2"></div>
             </div>
         </main>
-        
+        <p class="error"></p>
         <script src="js/grid.js"></script>
     </body>
 </html>

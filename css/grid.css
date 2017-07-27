@@ -7,7 +7,10 @@ and open the template in the editor.
     Created on : Jul 26, 2017, 2:29:55 PM
     Author     : seb
 */
-
+body{
+    display: flex;
+    flex-direction: column;
+}
 .map {
     display: flex;
     flex-wrap: wrap;
@@ -25,9 +28,6 @@ and open the template in the editor.
     /*padding:0px 30px 0px 30px;*/
 }
 .mapBlock {
-    margin: 0;
-    padding-left: 0px;
-    display: flex;
     background-color: darkblue;
     /*transition: 0.5s;*/
     border: 2px solid black;
@@ -40,4 +40,5 @@ and open the template in the editor.
 main{
     display: flex;
     justify-content: space-around;
+    margin-bottom: 30px;
 }

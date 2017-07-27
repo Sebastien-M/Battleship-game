@@ -29,11 +29,44 @@ function createMap(tagname, mapplayer) {
 function event(tablename, tableboats) {
     for (let x = 0; x <= 9; x++) {
         for (let y = 0; y <= 9; y++) {
-            let div = tablename[x][y].addEventListener('click', function () {
-                console.log(tablename[x][y]);
-                tablename[x][y].style.backgroundColor = "green";
-                console.log("x: " + x + " y: " + y);
-                tableboats.push([x, y]);
+            tablename[x][y].addEventListener('mouseover', function () {
+                try {
+                    if (tablename[x][y].style.backgroundColor === "green" && tablename[x][y].style.opacity === "1" ||
+                            tablename[x + 1][y].style.backgroundColor === "green" && tablename[x + 1][y].style.opacity === "1") {
+                        return;
+                    } else {
+                        document.body.querySelector(".error").textContent = "";
+                        tablename[x][y].style.backgroundColor = "green";
+                        tablename[x][y].style.opacity = 0.5;
+                        tablename[x + 1][y].style.backgroundColor = "green";
+                        tablename[x + 1][y].style.opacity = 0.5;
+                    }
+                } catch (e) {
+                    document.body.querySelector(".error").textContent = "Impossible de placer un bateau ici";
+                }
+//                tableboats.push([x, y]);
+            });
+//            Mouseleave
+            tablename[x][y].addEventListener('mouseout', function () {
+                try {
+                    if (tablename[x][y].style.backgroundColor === "green" && tablename[x][y].style.opacity === "1" ||
+                            tablename[x + 1][y].style.backgroundColor === "green" && tablename[x + 1][y].style.opacity === "1") {
+                        return;
+                    } else {
+                        tablename[x][y].style.backgroundColor = "darkblue";
+                        tablename[x][y].style.opacity = 1;
+                        tablename[x + 1][y].style.backgroundColor = "darkblue";
+                        tablename[x + 1][y].style.opacity = 1;
+                    }
+                } catch (e) {
+                }
+//                tableboats.push([x, y]);
+            });
+            tablename[x][y].addEventListener('click', function () {
+                tablename[x ][y].style.backgroundColor = "green";
+                tablename[x ][y].style.opacity = "1";
+                tablename[x + 1][y].style.backgroundColor = "green";
+                tablename[x + 1][y].style.opacity = "1";
             });
         }
     }

@@ -1,0 +1,43 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 26, 2017, 2:29:55 PM
+    Author     : seb
+*/
+
+.map {
+    display: flex;
+    flex-wrap: wrap;
+    width: 107%;
+    height: 107%;
+    /*overflow: hidden;*/
+    /*padding:0px 30px 0px 30px;*/
+}
+.map2 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 107%;
+    height: 107%;
+    /*overflow: hidden;*/
+    /*padding:0px 30px 0px 30px;*/
+}
+.mapBlock {
+    margin: 0;
+    padding-left: 0px;
+    display: flex;
+    background-color: darkblue;
+    /*transition: 0.5s;*/
+    border: 2px solid black;
+}
+.game {
+    min-width: 320px;
+    max-height: 310px;
+    max-width: 320px;
+}
+main{
+    display: flex;
+    justify-content: space-around;
+}
